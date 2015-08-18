@@ -10,6 +10,4 @@ public class EmployeeService {
 		employee.setName("Andreas");
 		System.out.println("Printing employee with name: " + employee.getName());
 	}
-
-	
 }
