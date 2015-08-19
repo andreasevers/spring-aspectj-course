@@ -1,6 +1,7 @@
 package be.ordina.spring;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -16,6 +17,11 @@ public class Application {
 		EmployeeService employeeService = context.getBean("employeeService", EmployeeService.class);
 		employeeService.printEmployeeName();
 		context.close();
+	}
+	
+	@Bean
+	public LoggingAspect logAspect() {
+		return new LoggingAspect();
 	}
 	
 }

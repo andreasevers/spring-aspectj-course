@@ -9,5 +9,6 @@ public class EmployeeService {
 		Employee employee = new Employee();
 		employee.setName("Andreas");
 		System.out.println("Printing employee with name: " + employee.getName());
+		throw new RuntimeException();
 	}
 }
